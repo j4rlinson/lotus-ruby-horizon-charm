@@ -1,0 +1,58 @@
+export const mistakes = [
+  {
+    id: "cadena-falsa",
+    title: "Regla de la cadena con un término de más",
+    from: "Tus apuntes (notación Lagrange)",
+    wrong: "f'(x) = g'(h(x)) · h'(x) + g(x) · h'(x)",
+    wrongTex: "f'(x)=g'(h(x))\\,h'(x)+g(x)\\,h'(x)",
+    right: "f'(x) = g'(h(x)) · h'(x)   — y nada más.",
+    rightTex: "f'(x)=g'(h(x))\\,h'(x)",
+    why: "El segundo término es de la regla del producto. Si f = g ∘ h, solo se multiplica por la derivada de adentro. Mezclarlas te duplica piezas en el punto 4.",
+  },
+  {
+    id: "ingreso-08",
+    title: "I(x) = 200x − 0,8x² mal derivada",
+    from: "Taller corte 1, ejercicio 15 · tu cuaderno",
+    wrong: "I'(x) = 200 − 0,16  y luego 199,4. Eso no es una función ni un punto crítico.",
+    wrongTex: "I'(x)=200-0{,}16=199{,}4 \\quad \\text{(incorrecto)}",
+    right: "I'(x) = 200 − 1,6x.  I'(x)=0 ⇒ 1,6x = 200 ⇒ x = 200/1,6 = 125.",
+    rightTex: "I'(x)=200-1{,}6x=0 \\Rightarrow x=125",
+    why: "La derivada de 0,8x² es 1,6x, no 0,16. Y I'(x)=0 pide despejar x, no evaluar un número suelto. Este es el mismo gesto del punto 7.",
+  },
+  {
+    id: "cociente-signo",
+    title: "Signo del cociente al revés",
+    from: "Error típico del punto 2b",
+    wrong: "(uv' − u'v)/v²",
+    wrongTex: "\\frac{uv'-u'v}{v^2}",
+    right: "(u'v − uv')/v²  — primero la derivada del numerador.",
+    rightTex: "\\frac{u'v-uv'}{v^2}",
+    why: "Si lo inviertes, en el simulacro el −16 se vuelve +16 y el punto se pierde.",
+  },
+  {
+    id: "constante-utilidad",
+    title: "El costo fijo no mueve el x*",
+    from: "ABP: 8.000 vs 8.000.000",
+    wrong: "Pensar que cambiar el costo fijo cambia el nivel óptimo.",
+    right:
+      "U'(x) no ve constantes. x* es el mismo; U(x*) sí cambia. En el parcial usa las unidades del enunciado y sé consistente.",
+    why: "En el ABP el CF mal escalado dejó U negativa, pero x*=1666,67 no se movió. Mañana: copia las unidades y no conviertas a mitad de camino.",
+  },
+  {
+    id: "segunda-signo",
+    title: "Leer mal el signo de la segunda derivada",
+    from: "Puntos 6–7 y ABP de V(t)",
+    wrong: "«V'' va bajando entonces ya se desacelera» — no. Mientras V'' > 0, todavía se acelera, aunque la aceleración sea cada vez menor.",
+    right: "Acelera ⟺ U'' o V'' > 0. Desacelera ⟺ < 0. El valor 0 es el inflexión (t=6,67 en el ABP). El signo, no la tendencia del signo, decide el criterio de máximo.",
+    why: "U'' = −4 es máximo. Punto. No hace falta una tabla de valores si el criterio es directo.",
+  },
+  {
+    id: "sin-frase",
+    title: "Número sin interpretación",
+    from: "Instrucciones de la prueba",
+    wrong: "f'(2) = 30  y se acabó.",
+    right:
+      "«Cuando se producen 2 unidades, el costo de una unidad adicional es aproximadamente 30 cientos de miles de pesos.»",
+    why: "La hoja dice: la interpretación forma parte de la evaluación. Reserva 1 minuto por punto para la frase.",
+  },
+];
